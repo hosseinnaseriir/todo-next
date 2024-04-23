@@ -1,0 +1,12 @@
+{
+  "email": "Email",
+  "password": "Password",
+  "login": "Login",
+  "dont_have_account": "Don't Have Account?",
+  "register_now": "Register Now!",
+  "name": "Name",
+  "repeat_password": "Repeat Password",
+  "register": "register",
+  "already_have_account": "Already Have Account?",
+  "login_now": "Login Now!"
+}
