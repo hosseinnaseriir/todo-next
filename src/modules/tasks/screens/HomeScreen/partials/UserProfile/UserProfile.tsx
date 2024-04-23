@@ -14,7 +14,7 @@ export const UserProfile: FunctionComponent<UserProfileProps> = (props) => {
   const router = useRouter();
   useEffect(() => {
     if (userData?.data) {
-      const pusher = new Pusher('caf11dfba44c242c11d8', {
+      const pusher = new Pusher(process.env.NEXT_PUBLIC_PUSHER_URL ?? '', {
         cluster: 'ap3',
         channelAuthorization: {
           customHandler: (
@@ -22,7 +22,7 @@ export const UserProfile: FunctionComponent<UserProfileProps> = (props) => {
             callback: (error: any, data: any) => void
           ) => {
             return fetch(
-              'https://sample-api.heli.technology/auth/broadcasting',
+              process.env.NEXT_PUBLIC_BROADCASTING_URL ?? '',
               {
                 method: 'POST',
                 headers: {
